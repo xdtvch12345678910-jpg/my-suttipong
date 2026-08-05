@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัวเอง - หน้าที่ 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        /* ปรับแต่งแถบเลือกหน้าโฉมใหม่ */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-container {
+            display: inline-flex;
+            background: #edf2f7;
+            padding: 6px;
+            border-radius: 30px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #718096;
+            font-size: 16px;
+            margin: 0 4px;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        /* เมื่อเอาเมาส์ไปชี้ปุ่ม */
+        .navbar a:hover {
+            color: #2b6cb0;
+            background: rgba(255, 255, 255, 0.6);
+        }
+        /* หน้าที่กำลังเลือกอยู่ */
+        .navbar a.active {
+            background: linear-gradient(135deg, #3182ce, #2b6cb0);
+            color: white;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.35);
+        }
+
+        /* กล่องเนื้อหาหลัก */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        h1 { color: #2d3748; font-size: 34px; margin-bottom: 5px; font-weight: 600; }
+        .subtitle { color: #718096; font-size: 18px; margin-bottom: 25px; }
+        
+        .profile-img-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 30px auto;
+            background: linear-gradient(135deg, #74ebd5, #3182ce);
+            padding: 5px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(49, 130, 206, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .profile-img-container:hover { transform: scale(1.05) rotate(3deg); }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: white; }
+        
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; text-align: left; }
+        @media (max-width: 500px) { .info-grid { grid-template-columns: 1fr; } }
+        .info-card { background: #f7fafc; padding: 15px 20px; border-radius: 16px; border-left: 4px solid #3182ce; }
+        .info-card h3 { margin: 0; font-size: 16px; color: #a0aec0; font-weight: 400; }
+        .info-card p { margin: 5px 0 0 0; font-size: 18px; color: #2d3748; font-weight: 600; }
+        .info-card-full { grid-column: span 2; }
+        @media (max-width: 500px) { .info-card-full { grid-column: span 1; } }
+
+        .fb-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 40px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(135deg, #1877f2, #0a52b7);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+            transition: all 0.3s ease;
+        }
+        .fb-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(24, 119, 242, 0.6); }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเลือกหน้าโฉมใหม่ -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="active">หน้า 1: แนะนำตัว</a>
+            <a href="page2.html">หน้า 2: ทักษะและอาชีพ</a>
+            <a href="page3.html">หน้า 3: กิจวัตรประจำวัน</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>นายสุทธิพงษ์ กุลชลิต</h1>
+        <div class="subtitle">เลขที่ 030 | นักศึกษาชั้นปีที่ 1</div>
+
+        <div class="profile-img-container">
+            <img src="https://img1.pic.in.th/images/IMG_20260416_124916.md.jpg" alt="รูปประวัติส่วนตัว">
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>วันเดือนปีเกิด</h3>
+                <p>26 พฤษภาคม 2552</p>
+            </div>
+            <div class="info-card">
+                <h3>อายุ</h3>
+                <p>17 ปี</p>
+            </div>
+            <div class="info-card info-card-full">
+                <h3>สถานศึกษาปัจจุบัน</h3>
+                <p>วิทยาลัยเทคนิคเชียงใหม่</p>
+            </div>
+            <div class="info-card info-card-full">
+                <h3>สิ่งที่ชอบ / งานอดิเรก</h3>
+                <p>นอนพักผ่อน, เล่นเกม, ฟังเพลง</p>
+            </div>
+        </div>
+
+        <div style="margin-top:30px;">
+           
+            <div style="margin-top:30px;">
+    
+
+    <video width="100%" autoplay muted loop controls playsinline>
+        <source src="deasy - ถึงเธอไม่มีเขาเราก็ไม่ได้รักกันอยู่ดี (pity)_1080p.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+    </video>
+</div>
+        </div>
+
+        <a href="https://www.facebook.com/su.ng.703556?locale=th_TH" target="_blank" class="fb-btn">
+            🔥 อยากส่องก็เข้ามานี้ 🔥
+        </a>
+    </div>
+
+</body>
+</html>
